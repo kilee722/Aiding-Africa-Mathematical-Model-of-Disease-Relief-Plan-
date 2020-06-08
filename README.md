@@ -1,4 +1,4 @@
-# Aiding-Africa-Mathematical-Model-of-Disease-Relief-Plan
+# Aiding Africa: Disease-Relief-Plan
 Three supply chain mathematical models for maximum supply efficiency,  minimum distribution cost, and maximum cargo under restrictions plan
 
 Africa is one of the most disease and disaster-prone continents. Due to lack of infrastructure, unstable government and inadequate resources, the communities are not able to cope with natural and health related disasters. To aid the communities, I have assembled an action plan that will assist IFRC to allocate their resources. The disaster relief plan requires that the targeted cities get the help they need in the quickest and most efficient manner from IFRC. Cargo and workers will be delivered in ships and planes from either New York or Jacksonville, Florida to three ports on the African continent for refueling and replenishing before they reach the targeted cities. 
