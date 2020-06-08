@@ -1,0 +1,75 @@
+---
+title: "midterm_project_memo"
+author: "Ki Min Lee"
+date: "5/17/2020"
+output: 
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(lpSolve)
+library(lpSolveAPI)
+library(ggplot2)
+library(kableExtra)
+library(readxl)
+```
+
+
+To: The Donners for IFRC Funding
+From: Ki Min Lee
+Date: 05/17/2020
+RE: Aiding Africa - Disaster/disease relief plan
+
+Africa is one of the most disease and disaster-prone continents. Due to lack of infrastructure, unstable government and inadequate resources, the communities are not able to cope with natural and health related disasters. To aid the communities, I have assembled an action plan that will assist IFRC to allocate their resources. The disaster relief plan requires that the targeted cities get the help they need in the quickest and most efficient manner from IFRC. Cargo and workers will be delivered in ships and planes from either New York or Jacksonville, Florida to three ports on the African continent for refueling and replenishing before they reach the targeted cities. 
+I have developed my model based on the given data to analyze and calculate the measures and the amount of supply for each city. For the maximum efficiency plan where the cost is not an object, I aim to supply most resources in the quickest way possible. 
+
+**Initial Network Map**
+
+![](networkmap_q1.png)
+
+The first goal of the plan is to identify the ways in which I can aid the supply without cost restrictions. For the maximum efficiency plan, I aim to supply most resources in the quickest way possible. To calculate the minimum travel time in hours I use the equation ((total distance/speed of transportation) / 60). I used the Transport characteristic table, African destinations table, and City Transport Pairs table for model creation. My findings suggest that the shortest route would be from the US -> Sudan -> Chad. The network diagram will help in identifying the routes that need to be taken. Knowing the shortest route allows IFRC to get to the disaster inflicted city in a timely manner so they can provide aid to such places and communities when emergency strikes.
+The significant bottleneck in the system that the IFRC should work to reduce is in Luanda, Angola, which is the longest route and takes most time in distributing aid to Africa. An additional port city will be required in between to reduce the transport time from the port of origin. Once the cargo arrives at this port in Angola, the aid can be distributed using land transportation thus, saving time in transportation and increasing efficiency.
+
+
+**Network Map (travel time efficient)**
+
+![](q2n.png){width=500px, height=400px}
+
+**Table (travel time efficient)** 
+
+![](table_q2.png){width=500px, height=400px}
+
+The second formulation plan I have allows IFRC to utilize the funding in the most efficient manner as I aim to minimize the total cost of distributing aid. The cost can be reduced by using the optimal routes to deliver the aid to the targeted cities. The plan takes into account restrictions enforced in the method of delivery. I used the Transport characteristic table, African destinations tablethe, City Transport Pairs table, Aid Requirements table, and Air Restrictions table for creating the model. The IFRC faces a number of restrictions when trying to satisfy the requirements. Supplies to Niamey, Niger can only arrive via air. The truck routes into Ndjamena, Chad are restricted so at most 840 trucks can be sent to Ndjamena, Chad from each port. Some African governments are sensitive about IFRC airplanes flying through their air space. The IFRC is restricted to at most 200 flights from Lusaka, Zambia to Ndjamena, Chad and to at most 200 flights from Khartoum, Sudan to Ndjamena, Chad. The minimum cost identified by my model to deliver aid is $310861. The significant bottlenecks in the system that the IFRC should work to reduce is from Khartoum to Ndjamena. The aid can also be transported from Nairobi to Ndjamena as there are no restrictions for that route which can effectively lower the total cost. 
+
+**Network Map (cost efficient)**
+
+![](q3n.png){width=500px, height=400px}
+
+**Table (cost efficient)** 
+
+![](table_q3.png){width=500px, height=400px}
+
+Finally, my third action plan allows IFRC to maximize the cargo to the targeted cities. In a scenario where more supplies are needed at the target city, this plan can be adopted as I dodge the many restrictions imposed at the ports of delivery for certain cities. It is imperative to have an alternative plan for maximizing supply. The restrictions imposed can be a maximum number of airplanes and trucks to travel across the continent. Based on these restrictions I determine the maximum capacity. I used the Transport characteristic table, African destinations table, Aid Requirements table, Air Restrictions table, and Truck Restrictions table for creating the model. I have found that the IFRC can send upto 816701 tons of cargo to Africa. 
+The action plans I discussed can be confidently adopted based on my findings to provide aid and relief to African communities based on the circumstance that the IFRC is dealing with.
+
+
+**Network Map (shipping capacity efficient)**
+
+![](q4n.png){width=500px, height=400px}
+
+**Table (shipping capacity efficient)** 
+
+![](table_q4.png){width=500px, height=400px}
+
+Please do not hesitate to contact me if you have questions or would like to discuss the analysis further, it is best to reach me at klee1@seattleu.edu. I can provide the Technical Appendix with complete analysis and the data if you would like more detail.
+Best regards,
+Ki Min 
